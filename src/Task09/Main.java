@@ -1,6 +1,8 @@
 package Task09;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,9 +36,10 @@ public class Main {
 
 
         System.out.println(exercise2noSet(list2));
+        System.out.println(exercise2Set(list2));
     }
 
-    static ArrayList<String> exercise1 (ArrayList<String> list){
+    static ArrayList<String> exercise1(ArrayList<String> list) {
         ArrayList<String> newList = new ArrayList<>();
 
         for (String str : list) {
@@ -49,7 +52,7 @@ public class Main {
         return newList;
     }
 
-    static ArrayList<String> exercise2noSet (ArrayList<String> list){
+    static ArrayList<String> exercise2noSet(ArrayList<String> list) {
         ArrayList<String> newList = new ArrayList<>();
 
         for (String str : list) {
@@ -58,6 +61,12 @@ public class Main {
             }
         }
         return newList;
+    }
+
+    static Set<String> exercise2Set(ArrayList<String> list) {
+        Set<String> set = new HashSet<>(list);
+
+        return set;
     }
 
 
